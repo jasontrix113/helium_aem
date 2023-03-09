@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="nt:unstructured"
+    jcr:title="Money Management Resources"
+    sling:resourceType="cq/gui/components/authoring/dialog">
+    <content
+        jcr:primaryType="nt:unstructured"
+        sling:resourceType="granite/ui/components/coral/foundation/container">
+        <layout
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="granite/ui/components/coral/foundation/tabs"
+            type="-nav"/>
+        <items jcr:primaryType="nt:unstructured">
+            <awards
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Awards Properties"
+                sling:resourceType="granite/ui/components/foundation/section">
+                <layout
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns"/>
+                <items jcr:primaryType="nt:unstructured">
+                    <column
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/container">
+                        <items jcr:primaryType="nt:unstructured">
+                            <description
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/textarea"
+                                fieldLabel="Description"
+                                name="./description"/>
+                            <awards
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/multifield"
+                                composite="{Boolean}true"
+                                fieldLabel="Awards">
+                                <field
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="granite/ui/components/coral/foundation/container"
+                                    name="./awards">
+                                    <items jcr:primaryType="nt:unstructured">
+                                        <column
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="granite/ui/components/coral/foundation/container">
+                                            <items jcr:primaryType="nt:unstructured">
+                                                <awardtype
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/form/select"
+                                                    fieldDescription="Select Award Type"
+                                                    fieldLabel="Award Type"
+                                                    name="./type">
+                                                    <items jcr:primaryType="nt:unstructured">
+                                                        <gold
+                                                            jcr:primaryType="nt:unstructured"
+                                                            text="gold"
+                                                            value="gold"/>
+                                                        <silver
+                                                            jcr:primaryType="nt:unstructured"
+                                                            text="silver"
+                                                            value="silver"/>
+                                                        <bronze
+                                                            jcr:primaryType="nt:unstructured"
+                                                            text="bronze"
+                                                            value="bronze"/>
+                                                        <other
+                                                            jcr:primaryType="nt:unstructured"
+                                                            text="other"
+                                                            value="other"/>
+                                                    </items>
+                                                </awardtype>
+                                                <award
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                    fieldDescription="Name of Award"
+                                                    fieldLabel="Award Name"
+                                                    name="./award"/>
+                                            </items>
+                                        </column>
+                                    </items>
+                                </field>
+                            </awards>
+                        </items>
+                    </column>
+                </items>
+            </awards>
+        </items>
+    </content>
+</jcr:root>

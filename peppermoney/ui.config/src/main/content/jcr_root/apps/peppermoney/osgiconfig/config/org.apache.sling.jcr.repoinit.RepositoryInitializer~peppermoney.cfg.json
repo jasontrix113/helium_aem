@@ -1,0 +1,7 @@
+{
+    "scripts": [
+        "create path (sling:OrderedFolder) /content/dam/peppermoney",
+        "create path (nt:unstructured) /content/dam/peppermoney/jcr:content",
+        "set properties on /content/dam/peppermoney/jcr:content\n  set cq:conf{String} to /conf/peppermoney\n  set jcr:title{String} to \"PepperMoney\"\nend"
+    ]
+}
